@@ -2,19 +2,24 @@
 <div>
 
     <div v-bind:key="todo.id" v-for="todo in todos">
-        <h3>{{todo.tittle}}</h3>
+       <Todoitem v-bind:todo="todo"/>
     </div>
 
 </div>    
 </template>
 
 <script>
+import Todoitem from './Todoitem.vue';
+
 export default {
     name:"Todos",
+    components: {
+        Todoitem
+    },
     props: ["todos"]
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 
 </style>
