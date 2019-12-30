@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <Header />
-    <Addtodo v-on:add-todo="addTodo"/>
-   <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+    <div class="container">
+     <div class="card mb-3 ">
+          <Addtodo v-on:add-todo="addTodo"/>
+          <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+     </div>
+  </div>
   </div>
 </template>
 
