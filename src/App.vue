@@ -4,6 +4,10 @@
     <div class="container">
      <div class="card mb-3 ">
           <Addtodo v-on:add-todo="addTodo"/>
+     </div>
+     <br/>
+
+     <div class="card mb-3 ">
           <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
      </div>
   </div>
